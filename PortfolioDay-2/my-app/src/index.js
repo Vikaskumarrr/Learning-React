@@ -1,37 +1,39 @@
-/**
- * <button class="btn">Click Me</button> 
- */
+// Event Listeners
+
+// Components
 
 import React from "react";
 import { createRoot } from "react-dom/client";
 
-// const button = <button className="btn">Click Me</button>;
-// extended markup language
-// <tag>data</tag>
-// <button className="btn">Click Me</button> + babel => React.createElement();
+const root = createRoot(document.getElementById("root"));
 
-// JSX Syntex
+// const onClickBtn = ()=> console.log("click btn")
 
-// const inputLable = "Enter Name";
-// const input = "email";
-// const name = "Vikas";
+// const container = (
+//     <>
+//     <button onClick={onClickBtn}>Click Me</button>
+//     </>
+// )
 
+// Component => Class component & Functional components
 
-const container = (
-  <div id="container" className="abc xyg mno" >
-    {/* <label htmlFor={input}>{inputLable}</label>
-<input placeholder="email" id={input}/> */}
-    <b>{[10,20,30]}</b>
-  </div>
-);
+// A functional component is a javascript function which return jsx start with capital letter
 
-// to embed data inside the JSX we use {data}
-// Boolean , null , undefined valueas will not be displayed in the JSX
-// Object are not valid react children
-//  Array can be rendered as a chldren to react element
+const User = ({name, age})=>{ 
+    return(
+        <div>
+            <p>name:{name}</p>
+            <p>age:{age}</p>
+        </div>
+    )
+}
 
 
-const app = document.getElementById("root");
-const root = createRoot(app);
-root.render(container);
+root.render(<User name="vikas" age="23"/>);
+
+// To distinguish between native htm tags and custom component,
+// name and age are props
+// User({name:"Vikas", age:"23"})=> <User />
+// User({name:"Vikas", age:"23"})=> <User name="vikas" age="23"/>
+
 

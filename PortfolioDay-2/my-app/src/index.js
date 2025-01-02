@@ -29,7 +29,7 @@ const User = ({name, age})=>{
 }
 
 
-root.render(<User name="vikas" age="23"/>);
+root.render(User ({name: "vikas6", age: "23"}));
 
 // To distinguish between native htm tags and custom component,
 // name and age are props

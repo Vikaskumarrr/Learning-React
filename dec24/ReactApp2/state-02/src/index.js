@@ -3,6 +3,8 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import FunctionalComponent from './functionalComponent';
+import { Input } from './input';
+import EffectExample from './Effects';
 /**
  * Life cycle phases / methods of a react component 
  * useState Hook 
@@ -34,4 +36,6 @@ class Toggle extends Component {
   }
 }
 
-root.render(<FunctionalComponent />)
+
+
+root.render(<EffectExample />)

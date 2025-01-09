@@ -1,0 +1,36 @@
+
+// Mixins => function 
+
+@mixin rowItem($direction, $gap ){ 
+    display: flex;
+    flex-direction: $direction;
+    gap: $gap;
+    align-items: center;
+}
+
+$bgColor: #000;
+
+
+.app{ 
+    border: 1px solid blue; 
+    .btn{ 
+        background-color: $bgColor;
+        padding: 5px 10px;
+        border: none;
+        margin: 10px ;
+        &:hover{ 
+            background-color: red;
+            border-radius: 10px;
+        }
+        &::after{ 
+            content: "";
+            display: flex;
+            width: 10px;
+            height: 10px;
+            background-color: blue;
+        }
+    } 
+    .container{ 
+        @include rowItem(coloum, 20px )
+    }
+}

@@ -1,36 +1,39 @@
+$bradius : 27px ;  
 
-// Mixins => function 
-
-@mixin rowItem($direction, $gap ){ 
+.container{ 
     display: flex;
-    flex-direction: $direction;
-    gap: $gap;
-    align-items: center;
-}
-
-$bgColor: #000;
-
-
-.app{ 
-    border: 1px solid blue; 
-    .btn{ 
-        background-color: $bgColor;
-        padding: 5px 10px;
-        border: none;
-        margin: 10px ;
-        &:hover{ 
-            background-color: red;
-            border-radius: 10px;
-        }
-        &::after{ 
-            content: "";
-            display: flex;
-            width: 10px;
-            height: 10px;
-            background-color: blue;
-        }
-    } 
-    .container{ 
-        @include rowItem(coloum, 20px )
+    height: 100vh;
+    flex-direction: column;
+    .image-list{
+        flex-grow: 1;
     }
+    .search-bar{ 
+        padding: 20px max(50px, 10vw);
+        background-color: #edf2f397;
+        display: flex;
+        justify-content: center;
+        align-items: stretch;
+        gap:  10px;
+        box-shadow: 1px 1px 4px #e3e3e3;
+        input{ 
+            flex-grow: 1;
+            border: 1px solid #e3e3e3;
+            border-radius: $bradius;
+            padding: 10px;
+            &:focus{ 
+                outline: none;
+            }
+        }
+        .btn{ 
+            background-color: blue;
+            border-radius: $bradius;
+            box-sizing: content-box !important;
+            padding: 5px 20px ;
+        }
+        
+    }
+    .pegination{ 
+        background-color:#e3e3e3 ;
+    }
+
 }

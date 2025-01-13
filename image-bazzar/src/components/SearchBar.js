@@ -2,15 +2,15 @@
 import { Button } from "antd";
 import { useState } from "react";
 
-const SearchBar = () => {
-    const [value , setValue] = useState("");
+const SearchBar = ({updateQuery ,defualtValue}) => {
+    const [value , setValue] = useState(defualtValue);
 
     const onChange = (e)=>{ 
         setValue(e.target.value);
     }
 
     const seachImage = ()=>{ 
-        // TODO LETTER
+        updateQuery(value)
     }
     return (
         <div className="search-bar">
@@ -25,3 +25,6 @@ const SearchBar = () => {
 }; 
 
 export default SearchBar ; 
+/**
+  
+ */

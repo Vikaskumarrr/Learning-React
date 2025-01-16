@@ -10,7 +10,11 @@ import { Button, Form, Input } from "antd";
     return ( 
         <div className="form">
             <Form onFinish={onSubmitform}>
-                <Form.Item name="email">
+                <Form.Item name="email" rules={
+                    [{required: true,
+                        message: "Please Enter your Email"
+                    }]
+                }>
                     <Input placeholder="Enter you Email"/>
                 </Form.Item >
                 <Form.Item name="name">
@@ -28,3 +32,9 @@ import { Button, Form, Input } from "antd";
 }
 
 export default Signup ; 
+
+
+
+/**
+ *       
+ */

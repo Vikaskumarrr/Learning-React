@@ -10,7 +10,7 @@ import { Button, Form, Input } from "antd";
     return ( 
         <div className="form">
             <Form onFinish={onSubmitform}>
-                <Form.Item name="email" rules={
+                <Form.Item name="email" label="Email" rules={
                     [{required: true,
                         message: "Please Enter your Email"
                     }]

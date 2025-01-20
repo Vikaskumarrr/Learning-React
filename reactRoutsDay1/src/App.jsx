@@ -1,16 +1,19 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import './App.css'
-import { About } from './About';
+// import { About } from './About';
 import HomeScreen from './HomeScreen';
-
-
+import FetchUsers from "./Components/FetchUsers";
 
 
 
 function App() { 
   return (
     <div>
-      <BrowserRouter>
+      < FetchUsers / >
+    </div>
+    )
+    }
+      {/* <BrowserRouter>
       <Routes>
         <Route path='home' element={<div>
           <h1 className='logo-spin'>Home page...</h1>  
@@ -25,7 +28,7 @@ function App() {
         <Route path='*' element={<div className='logo'> <h1>404 Page Not Found..</h1></div>}/>
       </Routes>
       </BrowserRouter>
-    </div>
-  )
-}
+    </div> */}
+  {/* )
+} */}
 export default App

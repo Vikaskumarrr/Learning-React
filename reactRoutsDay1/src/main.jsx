@@ -5,7 +5,9 @@ import App from './App.jsx'
 import ThemeApp from './ThemeApp.jsx'
 
 createRoot(document.getElementById('root')).render(
-  <ThemeApp />
-    // <App />
+  <App />
+  // <ThemeApp />
+    
+
   
 )

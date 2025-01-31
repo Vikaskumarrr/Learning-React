@@ -10,7 +10,6 @@ import { composeWithDevTools } from "redux-devtools-extension";
  * 
  */
 
-
 const reducer = function (state = { count: 10 }, action) {
     if (action.type === "increment") {
         return { count: state.count + 1 };
@@ -22,7 +21,13 @@ const reducer = function (state = { count: 10 }, action) {
 }
 
 const store = legacy_createStore(reducer, composeWithDevTools());
+ // for every 
 console.log(store);
+
+store.subscribe(()=>{ 
+    console.log("inside the subscriber 1")
+})
+
 
 console.log(store.getState());
 store.dispatch({ type: "increment" });

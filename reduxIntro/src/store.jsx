@@ -22,18 +22,18 @@ const reducer = function (state = { count: 10 }, action) {
 
 const store = legacy_createStore(reducer, composeWithDevTools());
  // for every 
-console.log(store);
+// console.log(store);
 
-store.subscribe(()=>{ 
-    console.log("inside the subscriber 1")
-})
+// store.subscribe(()=>{ 
+//     console.log("inside the subscriber 1")
+// })
 
 
-console.log(store.getState());
-store.dispatch({ type: "increment" });
-console.log(store.getState());
-store.dispatch({ type: "decrement" });
-console.log(store.getState());
+// console.log(store.getState());
+// store.dispatch({ type: "increment" });
+// console.log(store.getState());
+// store.dispatch({ type: "decrement" });
+// console.log(store.getState());
 
 
 

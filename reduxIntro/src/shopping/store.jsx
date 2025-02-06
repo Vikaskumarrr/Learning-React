@@ -44,9 +44,10 @@ function reducer(state = intialState, action) {
             let selectedProduct = null ; 
             return { 
                 ...state,
-                product: state.products.filter(product=>{ 
+                products : state.products.filter(product=>{ 
                     if(product.id === productId ){ 
                         selectedProduct = product;
+                        selectedProduct.quantity = 1 ;
                         return false;
                     }
                     return true;
@@ -56,6 +57,7 @@ function reducer(state = intialState, action) {
             }
             // get product id and move that object and form the product the car
         }
+        
         default:
             return state ;
     }

@@ -1,0 +1,17 @@
+.modifier{ 
+    display: flex;
+    align-items: center;
+    background-color: #328616;
+    color: #fff;
+    font-weight: 500;
+    justify-self: center;
+    align-self: center;
+    border-radius: 4px;
+    button{ 
+        padding: 5px 10px;
+        background-color: transparent;
+        color: #fff;
+        border: none ;
+        font-size: 1.3rem;
+    }
+}

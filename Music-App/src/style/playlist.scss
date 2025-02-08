@@ -1,0 +1,40 @@
+.playlist-container{ 
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 24px;
+    padding: 20px;
+
+    .cards{ 
+        background: #181818;
+        padding: 16px;
+        border-radius: 6px;
+        transition: background-color 0.3s ease;
+        cursor: pointer;
+
+        &:hover {
+            background: #282828;
+        }
+
+        p {
+            color: #fff;
+            font-weight: 500;
+            margin: 12px 0 4px;
+        }
+
+        img { 
+            width: 100%;
+            height: auto;
+            aspect-ratio: 1;
+            border-radius: 4px;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.5);
+        }
+
+        .bottom-box { 
+            display: flex;
+            align-items: center;
+            padding: 0;
+            margin: 0;
+            color: #b3b3b3;
+        }
+    }
+}

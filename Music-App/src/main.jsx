@@ -7,9 +7,16 @@ createRoot(document.getElementById('root')).render(
   <StrictMode>
     <App />
   </StrictMode>,
-)
+);
 
 /**
- * Playlists : 
- *  each playlist can have multiple song 
+ * playlist : 
+ *  each playlist  has multiple songs 
+ * 
+ * 1. Music plays 
+ * 2. Liked songs
+ * 
+ * user can play the song from list of songs present in playlist or from liked songs
+ * 
+ * 
  */

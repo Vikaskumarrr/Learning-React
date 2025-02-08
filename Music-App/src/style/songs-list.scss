@@ -1,0 +1,128 @@
+.song-list{ 
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    .song-card{ 
+        display: grid;
+        gap: 12px;
+        grid-template-columns: 20px 60px 1fr auto;
+        align-items: center;
+        padding: 12px 16px;
+        background-color: rgba(36, 139, 72, 0.1);
+        border-radius: 8px;
+        transition: all 0.2s ease;
+        cursor: pointer;
+        position: relative;
+        overflow: hidden;
+
+        &:hover {
+            background-color: rgba(30, 215, 96, 0.2);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+
+            .play-icon {
+                opacity: 1;
+                transform: scale(1);
+            }
+
+            img {
+                transform: scale(1.05);
+            }
+        }
+
+        .play-icon {
+            position: absolute;
+            right: 24px;
+            background: #1ed760;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transform: scale(0.8);
+            transition: all 0.2s ease;
+            
+            &:hover {
+                transform: scale(1.1);
+                background: #1db954;
+            }
+        }
+
+        .song-info {
+            // ... existing code ...
+
+            .song-title {
+                font-size: 16px;
+                font-weight: 600;
+                margin-bottom: 4px;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+
+            .song-artist {
+                font-size: 14px;
+                color: rgba(255, 255, 255, 0.7);
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+        }
+
+        .song-duration {
+            font-size: 14px;
+            font-weight: 500;
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        img { 
+            width: 50px;
+            height: 50px;
+            object-fit: cover;
+            border-radius: 4px;
+            transition: transform 0.2s ease;
+        }
+
+        &:active {
+            transform: scale(0.98);
+        }
+    }
+
+    // Add animation for list items
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+            transform: translateY(10px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    // Apply animation to cards
+    .song-card {
+        animation: fadeIn 0.3s ease forwards;
+        @for $i from 1 through 20 {
+            &:nth-child(#{$i}) {
+                animation-delay: #{$i * 0.05}s;
+            }
+        }
+    }
+    
+}
+
+.song-list{ 
+    
+    &::-webkit-scrollbar {
+        display: none;
+    }
+    
+  
+    -ms-overflow-style: none;  
+    scrollbar-width: none;  
+    
+    
+}

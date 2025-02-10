@@ -27,3 +27,12 @@ function App() {
 }
 
 export default App
+// revising all hooks 
+/**
+ * useState 
+ * useeffect
+ * Context API 
+ * useContext 
+ * useRef
+ * useMemo
+ */
